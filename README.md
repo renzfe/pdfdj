@@ -1,5 +1,6 @@
 # pdfdj
-PdfDJ is an application to merge and split PDF documents.
+PdfDJ is a Windows application to merge and split PDF documents.
+It is written in .NET 5.0.
 
 
 License
