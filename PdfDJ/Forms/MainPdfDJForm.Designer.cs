@@ -29,6 +29,7 @@ namespace PdfDJ.GUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPdfDJForm));
             this.buttonMerge = new System.Windows.Forms.Button();
             this.buttonSplit = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // buttonMerge
             // 
-            this.buttonMerge.Location = new System.Drawing.Point(120, 51);
+            this.buttonMerge.Location = new System.Drawing.Point(25, 46);
             this.buttonMerge.Name = "buttonMerge";
             this.buttonMerge.Size = new System.Drawing.Size(72, 72);
             this.buttonMerge.TabIndex = 0;
@@ -46,7 +47,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // buttonSplit
             // 
-            this.buttonSplit.Location = new System.Drawing.Point(243, 51);
+            this.buttonSplit.Location = new System.Drawing.Point(114, 46);
             this.buttonSplit.Name = "buttonSplit";
             this.buttonSplit.Size = new System.Drawing.Size(72, 72);
             this.buttonSplit.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(366, 51);
+            this.buttonClose.Location = new System.Drawing.Point(203, 46);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(72, 72);
             this.buttonClose.TabIndex = 2;
@@ -68,10 +69,11 @@ namespace PdfDJ.GUI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 179);
+            this.ClientSize = new System.Drawing.Size(301, 179);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSplit);
             this.Controls.Add(this.buttonMerge);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainPdfDJForm";
             this.Text = "PdfDJ";
             this.Load += new System.EventHandler(this.MainPdfDJForm_Load);

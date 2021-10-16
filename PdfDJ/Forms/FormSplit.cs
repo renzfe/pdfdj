@@ -87,12 +87,35 @@ namespace PdfDJ.GUI.Forms
 
         private void textBoxFile1_DragDrop(object sender, DragEventArgs e)
         {
+            bool goOn = false;
+            checkedListBoxPages.Items.Clear();
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             if (files != null && files.Length != 0)
             {
                 string pdfFilePath = files[0];
                 ((TextBox)sender).Text = pdfFilePath;
                 setDirOutput(pdfFilePath);
+                goOn = true;
+
+            }
+
+            if(goOn)
+            {
+                l.Info("start check pages..");
+                try
+                {
+                    int pages = PdfDJ.Library.Operations.Split.GetNumberOfPages(this.textBoxFile1.Text);
+                    checkedListBoxPages.Items.Clear();
+                    for (int i = 1; i <= pages; i++)
+                    {
+                        checkedListBoxPages.Items.Add(i);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                l.Info("end check pages.");
             }
         }
 
@@ -102,6 +125,11 @@ namespace PdfDJ.GUI.Forms
                 e.Effect = DragDropEffects.Link;
             else
                 e.Effect = DragDropEffects.None;
+        }
+
+        private void textBoxFile1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

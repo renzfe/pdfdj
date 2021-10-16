@@ -29,6 +29,7 @@ namespace PdfDJ.GUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSplit));
             this.textBoxSplitted = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkedListBoxPages = new System.Windows.Forms.CheckedListBox();
@@ -44,7 +45,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // textBoxSplitted
             // 
-            this.textBoxSplitted.Location = new System.Drawing.Point(75, 396);
+            this.textBoxSplitted.Location = new System.Drawing.Point(12, 259);
             this.textBoxSplitted.Name = "textBoxSplitted";
             this.textBoxSplitted.ReadOnly = true;
             this.textBoxSplitted.Size = new System.Drawing.Size(650, 23);
@@ -53,25 +54,25 @@ namespace PdfDJ.GUI.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(201, 157);
+            this.label1.Location = new System.Drawing.Point(657, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 15);
+            this.label1.Size = new System.Drawing.Size(131, 15);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Select the pages where to split document";
+            this.label1.Text = "Select the pages to split";
             // 
             // checkedListBoxPages
             // 
             this.checkedListBoxPages.FormattingEnabled = true;
-            this.checkedListBoxPages.Location = new System.Drawing.Point(75, 131);
+            this.checkedListBoxPages.Location = new System.Drawing.Point(668, 27);
             this.checkedListBoxPages.Name = "checkedListBoxPages";
             this.checkedListBoxPages.Size = new System.Drawing.Size(120, 256);
             this.checkedListBoxPages.TabIndex = 17;
             // 
             // buttonCheckPages
             // 
-            this.buttonCheckPages.Location = new System.Drawing.Point(201, 131);
+            this.buttonCheckPages.Location = new System.Drawing.Point(548, 154);
             this.buttonCheckPages.Name = "buttonCheckPages";
-            this.buttonCheckPages.Size = new System.Drawing.Size(159, 23);
+            this.buttonCheckPages.Size = new System.Drawing.Size(114, 23);
             this.buttonCheckPages.TabIndex = 15;
             this.buttonCheckPages.Text = "Discover pages";
             this.buttonCheckPages.UseVisualStyleBackColor = true;
@@ -80,7 +81,7 @@ namespace PdfDJ.GUI.Forms
             // lblFileOut
             // 
             this.lblFileOut.AutoSize = true;
-            this.lblFileOut.Location = new System.Drawing.Point(75, 84);
+            this.lblFileOut.Location = new System.Drawing.Point(12, 80);
             this.lblFileOut.Name = "lblFileOut";
             this.lblFileOut.Size = new System.Drawing.Size(96, 15);
             this.lblFileOut.TabIndex = 21;
@@ -88,7 +89,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(485, 364);
+            this.buttonClose.Location = new System.Drawing.Point(422, 227);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 20;
@@ -98,7 +99,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(566, 364);
+            this.buttonClear.Location = new System.Drawing.Point(503, 227);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 19;
@@ -108,7 +109,7 @@ namespace PdfDJ.GUI.Forms
             // 
             // buttonSplit
             // 
-            this.buttonSplit.Location = new System.Drawing.Point(650, 364);
+            this.buttonSplit.Location = new System.Drawing.Point(587, 227);
             this.buttonSplit.Name = "buttonSplit";
             this.buttonSplit.Size = new System.Drawing.Size(75, 23);
             this.buttonSplit.TabIndex = 18;
@@ -118,15 +119,16 @@ namespace PdfDJ.GUI.Forms
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.Location = new System.Drawing.Point(75, 102);
+            this.textBoxOutput.Location = new System.Drawing.Point(12, 98);
+            this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
-            this.textBoxOutput.Size = new System.Drawing.Size(650, 23);
+            this.textBoxOutput.Size = new System.Drawing.Size(650, 50);
             this.textBoxOutput.TabIndex = 14;
             // 
             // lblFile1
             // 
             this.lblFile1.AutoSize = true;
-            this.lblFile1.Location = new System.Drawing.Point(75, 31);
+            this.lblFile1.Location = new System.Drawing.Point(12, 9);
             this.lblFile1.Name = "lblFile1";
             this.lblFile1.Size = new System.Drawing.Size(173, 15);
             this.lblFile1.TabIndex = 16;
@@ -135,10 +137,12 @@ namespace PdfDJ.GUI.Forms
             // textBoxFile1
             // 
             this.textBoxFile1.AllowDrop = true;
-            this.textBoxFile1.Location = new System.Drawing.Point(75, 49);
+            this.textBoxFile1.Location = new System.Drawing.Point(12, 27);
+            this.textBoxFile1.Multiline = true;
             this.textBoxFile1.Name = "textBoxFile1";
-            this.textBoxFile1.Size = new System.Drawing.Size(650, 23);
+            this.textBoxFile1.Size = new System.Drawing.Size(650, 50);
             this.textBoxFile1.TabIndex = 13;
+            this.textBoxFile1.TextChanged += new System.EventHandler(this.textBoxFile1_TextChanged);
             this.textBoxFile1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBoxFile1_DragDrop);
             this.textBoxFile1.DragOver += new System.Windows.Forms.DragEventHandler(this.textBoxFile1_DragOver);
             // 
@@ -146,7 +150,7 @@ namespace PdfDJ.GUI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 310);
             this.Controls.Add(this.textBoxSplitted);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkedListBoxPages);
@@ -158,6 +162,7 @@ namespace PdfDJ.GUI.Forms
             this.Controls.Add(this.textBoxOutput);
             this.Controls.Add(this.lblFile1);
             this.Controls.Add(this.textBoxFile1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSplit";
             this.Text = "Split a document";
             this.Load += new System.EventHandler(this.FormSplit_Load);
