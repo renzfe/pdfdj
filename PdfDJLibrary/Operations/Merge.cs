@@ -37,7 +37,7 @@ namespace PdfDJ.Library.Operations
                 DirectoryInfo od = new DirectoryInfo(outputFolder);
                 if (!od.Exists) throw new Exception(string.Format("folder {0} inesistente", od.FullName));
 
-                string of = Path.Combine(od.FullName, string.Format("{0}.pdf", System.DateTime.Now.ToString("yyyymmdd_HHmmss")));
+                string of = Path.Combine(od.FullName, string.Format("{0}.pdf", System.DateTime.Now.ToString("yyyyMMdd_HHmmss")));
                 fileMerged = new FileInfo(of);
                 if (fileMerged.Exists) throw new Exception(string.Format("file {0} esistente", fileMerged.FullName));
 

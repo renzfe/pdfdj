@@ -6,8 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>PdfDJ.GUI</RootNamespace>
     <ApplicationIcon>Properties\applicationpdf_103614.ico</ApplicationIcon>
-    <Version>1.1.0</Version>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <Version>1.1.1</Version>
+    <AssemblyVersion>1.1.1</AssemblyVersion>
+    <FileVersion>1.1.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
