@@ -1,7 +1,7 @@
 # pdfdj
 pdfdj is a tool to merge and split PDF documents.
 
-It is written and runs on .NET 6.0 Framework.
+It is written and runs on .NET 8.0 .
 
 It can be used from: 
 1. PdfDJ.exe Windows Application (only on Windows OS)
